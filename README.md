@@ -19,12 +19,8 @@ All steps in the script are annotated, although some may still require additiona
 ---
 
 ## Features
-
-These steps can be run independently and include:
-
 - Merge the ESV table with taxonomic assignments  
-- Correct barcode hopping / tag switching  
-- Apply minimum-abundance filters per sample  
+- Minimum abundance filter ESV- and sample wise
 - Perform blank corrections using negative controls  
 - *(Optional)* Collapse ESVs assigned to the same species  
 
@@ -40,7 +36,7 @@ The script is intended to run inside an **RStudio Project** with the following f
 /Output         # final processed tables
 /Scripts        # store the .R script here
 
-These folders (except `/Scripts`) are created automatically by the script.
+These folders are created automatically by the script.
 
 ---
 
