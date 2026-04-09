@@ -4,7 +4,7 @@
 This repository provides an R script to **create, filter, and refine ESV tables** generated from the combined outputs of **APSCALE** and **apscale_blast / BOLDigger** metabarcoding pipelines.
 
 > ⚠️ This is **not** an official APSCALE extension.  
-> It is a helper script to post‑process Apscale outputs.
+> It is my helper script to post‑process Apscale outputs.
 
 The script is **not fully automated and requires manual revision** before use.  
 In particular, you may need to adjust column names to match your Apscale output files, create a vecor with your negative controlls and define the variables.
