@@ -4,8 +4,8 @@
 ##
 ## Tested with: 
 ## - apscale = 4.3.0
-## - apscale_blast = 1.3.2
-## - BOLDigger3 = 2.2.0
+## - apscale_blast = 2.0.6
+## - BOLDigger3 = 2.0.3
 ##
 ## Author: Nicola Rhyner
 ## Year: 2026
@@ -41,11 +41,10 @@ for (dir in subdirs) {
   }
 }
 
-
 # read input files --------------------------------
 abundance_table <- read_excel("")
-#taxonomy_table_apscale_blast <- read_excel("") 
-taxonomy_table_boldigger <- read_excel("")
+taxonomy_table_apscale_blast <- read_excel("") 
+#taxonomy_table_boldigger <- read_excel("")
 
 
 # Define columns in the taxonomy tables that are not samples. Will be used to select sample columns later on
@@ -59,9 +58,9 @@ tax_cols_boldigger <- c("id", "phylum", "class", "order",
 
 # --- Configuration variables -----------------------------------------------------
 # Project & labeling
-project_name      <- "test" # give your output tables a project name
-tax_assignment    <- "boldigger"    # select tax assignment method "apscale_blast" or "boldigger"
-outputfile_suffix <- "BOLD"     # Can be i.e. the used database (Midori/BOLD)
+project_name      <- "mammals_MiSeqi100_0002_merged" # give your output tables a project name
+tax_assignment    <- "apscale_blast"    # select tax assignment method "apscale_blast" or "boldigger"
+outputfile_suffix <- "midoriGB272"     # Can be i.e. the used database (Midori/BOLD)
 
 # [Optional] Sample name prefix or suffix to remove 
 samplename_prefix <- "no"
@@ -78,8 +77,7 @@ unwanted_cols_boldigger     <- c("status", "records", "records_ratio")
 # Create a vector with your negative controls for the blank correction  --------------------------------
 # Use sample names after any prefix/suffix removal
 # Uncomment and adapt when used:
-negatives <- c("NIC27_27", "NIC28_28", "NIC29_29")
-
+negatives <- ("NIC")
 
 # --- 0: Load and harmonize taxonomy table ------------------------------------------
 if (tax_assignment == "apscale_blast") {
@@ -395,7 +393,7 @@ if ("selected_level" %in% names(db.corr3)) {
     filter(!is.na(.data[[species_col]]))
 }
 
-message("Collapsalpe rows detected: ", nrow(mergeable_rows))
+message("Collapsable rows detected: ", nrow(mergeable_rows))
 
 
 # collapse the flags as well 
