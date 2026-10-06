@@ -10,9 +10,9 @@ The script is **not fully automated and requires manual revision** before use.
 In particular, you may need to adjust column names to match your Apscale output files, create a vecor with your negative controlls and define the variables.
 
 The current version was tested with:  
-- **Apscale v2.1.1**  
+- **Apscale v4.3.0**  
 - **apscale_blast v1.3.2**  
-- **BOLDigger v3 (2.2.0)**  
+- **BOLDigger v3 (2.3.0)**  
 
 All steps in the script are annotated, although some may still require additional clarification.
 
